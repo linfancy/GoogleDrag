@@ -1,0 +1,95 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>我自己的拖放</title>
+	<script type="text/javascript" src="drag.js"></script>
+	<style type="text/css">
+	.drag{
+		width: 300px;
+		height: 200px;
+		background-color: orange;
+		margin-top: 5px;
+	}
+	td{
+		vertical-align:top;
+	}
+	.drag_h{
+		width: 100%;
+		height: 20%;
+		background-color: white;
+	}
+	table{
+		width: 100%;
+		height: 100%;
+	}
+	</style>
+</head>
+<body>
+	<h1 style="text-align:center">我的拖放</h1>
+	<center>
+		<table id="t_1">
+			<tr>
+				<td>
+					<div class="drag" id="d_1">
+						<table>
+							<tr>
+								<td class="drag_h" id="d_1_h"><a href="#">1</a></td>
+							</tr>
+							<tr><td></td></tr>
+						</table>
+					</div>
+					<div class="drag" id="d_2">
+						<table>
+							<tr>
+								<td class="drag_h" id="d_2_h"><a href="#">2</a></td>
+							</tr>
+							<tr><td></td></tr>
+						</table>
+					</div>
+
+				</td>
+				<td>
+					<div class="drag" id="d_3">
+						<table>
+							<tr>
+								<td class="drag_h" id="d_3_h"><a href="#">3</a></td>
+							</tr>
+							<tr><td></td></tr>
+						</table>
+					</div>
+					<div class="drag" id="d_4">
+						<table>
+							<tr>
+								<td class="drag_h" id="d_4_h"><a href="#">4</a></td>
+							</tr>
+							<tr><td></td></tr>
+						</table>
+					</div>
+				</td>
+				<td>
+					<div class="drag" id="d_5">
+						<table>
+							<tr>
+								<td class="drag_h" id="d_5_h"><a href="#">5</a></td>
+							</tr>
+							<tr><td></td></tr>
+						</table>
+					</div>
+					<div class="drag" id="d_6">
+						<table>
+							<tr>
+								<td class="drag_h" id="d_6_h"><a href="#">6</a></td>
+							</tr>
+							<tr><td></td></tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</center>
+	<script type="text/javascript">
+	var _table = document.getElementById("t_1");
+	window.onload = _IG_initDrag(_table);
+	</script>
+</body>
+</html>
