@@ -2,13 +2,17 @@
 <head>
 	<meta charset="utf-8">
 	<title>我自己的拖放</title>
+	<script type="text/javascript" src="detect.js"></script>
 	<script type="text/javascript" src="drag.js"></script>
 	<style type="text/css">
 	.drag{
-		width: 300px;
+		width: 100%;
 		height: 200px;
 		background-color: orange;
 		margin-top: 5px;
+	}
+	.td_d{
+		width: 33%;
 	}
 	td{
 		vertical-align:top;
@@ -22,15 +26,23 @@
 		width: 100%;
 		height: 100%;
 	}
+	.table{
+		width: 80%;
+		height: 100%;
+	}
+	tr{
+		width: 100%;
+	}
+	.dm{position:relative;width:1px;height:1px;}
 	</style>
 </head>
 <body>
 	<h1 style="text-align:center">我的拖放</h1>
 	<center>
-		<table id="t_1">
+		<table id="t_1" class="table">
 			<tr>
-				<td>
-					<div class="drag" id="d_1">
+				<td class="td_d">
+					<div class="drag" id="d_1" style="position:relative">
 						<table>
 							<tr>
 								<td class="drag_h" id="d_1_h"><a href="#">1</a></td>
@@ -46,9 +58,10 @@
 							<tr><td></td></tr>
 						</table>
 					</div>
-
+					<div class="dm"></div>
 				</td>
-				<td>
+				<td>&nbsp;&nbsp;</td>
+				<td class="td_d">
 					<div class="drag" id="d_3">
 						<table>
 							<tr>
@@ -65,8 +78,10 @@
 							<tr><td></td></tr>
 						</table>
 					</div>
+					<div class="dm"></div>
 				</td>
-				<td>
+				<td>&nbsp;&nbsp;</td>
+				<td class="td_d">
 					<div class="drag" id="d_5">
 						<table>
 							<tr>
@@ -83,6 +98,7 @@
 							<tr><td></td></tr>
 						</table>
 					</div>
+					<div class="dm"></div>
 				</td>
 			</tr>
 		</table>
@@ -91,5 +107,6 @@
 	var _table = document.getElementById("t_1");
 	window.onload = _IG_initDrag(_table);
 	</script>
+	<!-- 按照table套一行tr，tr中套td，td再有div，div有table的方式，并且每列末尾都要有预留的，且列与列之间需要有td -->
 </body>
 </html>
